@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
+  resources :articles
   # get 'pages/index'
   get 'pages/contact'
   resources :tasks
