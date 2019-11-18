@@ -8,12 +8,9 @@
     <%= f.label :body, "Contenido" %>
     <%= f.cktext_area :body, class: 'form-control' %>
   </div>
-  <% if user_signed_in? %>
-      <%= f.hidden_field :user_id, value: current_user.id %>
-  <% else %>
-      <%= f.hidden_field :user_id, value: '1' %>
-  <% end %>
-
+  
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  
   <div class="actions">
     <%= f.submit 'Publicar', class: 'btn btn-platzi-blue' %>
   </div>
