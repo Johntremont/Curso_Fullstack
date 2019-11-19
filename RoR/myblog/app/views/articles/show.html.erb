@@ -7,10 +7,10 @@
 						<h1 class="article-header"><%= @article.title %></h1>
 						<p class="author">Por <%= @article.user.email %></p>
 						<div class="col mt-auto px-0">
-							<%= link_to 'Volver', articles_path %>							
+							<%# link_to 'Volver', articles_path %>							
 						</div>
 						<div class="col-md-8 mt-auto px-0">
-							<%= link_to 'Editar', edit_article_path %>
+							<%# link_to 'Editar', edit_article_path %>
 						</div>
 					</div>
 					<% if user_signed_in? %>
