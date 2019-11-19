@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
+  delete "articles/:id" => 'articles#destroy'
   devise_for :users
   root 'pages#index'
   resources :articles

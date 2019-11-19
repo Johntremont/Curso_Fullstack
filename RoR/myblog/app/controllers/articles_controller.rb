@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-	before_action :set_article, only: [:show, :edit, :update, :destroy]
+	before_action :set_article, only: [:show, :edit, :update, :destroy]  
 
 	def index
 		@articles = Article.all
@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
 	def destroy
 		@article.destroy
 		respond_to do |format|
-			format.html { redirect_to article_url, notice: "Tu articulo ha sido eliminado" }
+			format.html { redirect_to articles_path, notice: "Tu articulo ha sido eliminado" }
 			format.json { head :no_content }
 		end
 	end
