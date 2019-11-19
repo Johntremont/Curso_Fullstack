@@ -1,0 +1,15 @@
+<% @articles.each do |article| %>
+    <tr>
+        <div class="card">
+          <div class="card-body">
+            <h2 class="anton"><%= link_to article.title, article %></h2>
+            <%= link_to 'Show', :action => :show, :id => article.id %>
+            <%= link_to 'Edit', :action => :edit, :id => article.id %>
+            <%= link_to 'Destroy', { :action => :destroy, :id => article.id }, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+            <hr>
+            <div class="rawbody"><%= (raw article.body) %></div>
+          </div>
+        </div>
+        <br>
+    </tr>        
+      <% end %>
